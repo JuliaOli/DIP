@@ -1,0 +1,7 @@
+Borramentos
+
+Médio: Reduz a quantidade de variação de intensidade entre um pixel e o próximo. Ele simplesmente leva a média de todos os pixels na área do kernel e substitui o elemento central por essa média. Usado para reduzir o ruído nas imagens.
+Mediana: Calcula a mediana de todos os pixels sob a janela do kernel e o pixel central é substituído por esse valor mediano. Isso é altamente eficaz na remoção de ruído salpicado.
+Nos filtros gaussianos, o valor para o elemento central pode ser um valor que pode não existir na imagem original, mas com a mediana, uma vez que o elemento central é sempre substituído por algum valor de pixel na imagem, isso reduz o ruído de forma eficaz.
+Gaussiana: A filtragem Gaussiana é altamente eficaz na remoção do ruído Gaussiano da imagem.
+Bilateral: O filtro bilateral também usa um filtro Gaussiano no domínio espacial, mas também usa uma função das diferenças de intensidade de pixels. A função gaussiana do espaço garante que apenas os pixels são "vizinhos espaciais" são considerados para filtragem, enquanto o componente gaussiano aplicado no domínio da intensidade garante que somente aqueles pixels com intensidades semelhantes os pixels centrais são incluídos para calcular o valor de intensidade desfocada. Como resultado, este método preserva bordas.
