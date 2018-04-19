@@ -1,4 +1,5 @@
 '''
+
 - operation (dilation, erosion, opening, closing).
 - wsize (0, 1, 3, ..., 21).
 - kernel (Square, ellipse, cross).
@@ -19,8 +20,11 @@ img  = cv.imread('img1.jpeg',0)
 imgC = img.copy()
 
 cv.namedWindow(windowName)
+#Create Trackbar to choose kernel size
 cv.createTrackbar(kSizeName, windowName, 1, 21, call)
+#Create Trackbar to select Morphology operation
 cv.createTrackbar(operationName, windowName, 1, 4, call)
+#Create Trackbar to select kernel type
 cv.createTrackbar(kernelName, windowName, 1, 3, call)
 
 while(True):
@@ -33,7 +37,6 @@ while(True):
 
     if ksize == 0:
         ksize = 1
-    
 
     if ker == 0:
         kernel = cv.getStructuringElement(cv.MORPH_RECT,(ksize,ksize))
