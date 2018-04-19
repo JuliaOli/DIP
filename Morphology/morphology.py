@@ -2,8 +2,6 @@
 - operation (dilation, erosion, opening, closing).
 - wsize (0, 1, 3, ..., 21).
 - kernel (Square, ellipse, cross).
-
-
 '''
 
 
